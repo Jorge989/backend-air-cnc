@@ -19,6 +19,6 @@ const SpotSchema = new mongoose.Schema(
 );
 
 SpotSchema.virtual("thumbail_url").get(function () {
-  return `http://localhost:3333/files/${this.thumbnail}`;
+  return `https://backend-aricnc.herokuapp.com/files/${this.thumbnail}`;
 });
 module.exports = mongoose.model("Spot", SpotSchema);
